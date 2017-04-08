@@ -1,0 +1,77 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js">
+    </script>
+    <script
+        src="http://code.angularjs.org/1.2.13/angular.js">
+    </script>
+    <script
+        src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.js">
+    </script>
+    <!-- /Angular  -->
+    <!-- Date rangepicker -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js">
+    </script>
+    <script
+        type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/ng-bs-daterangepicker/0.0.6/ng-bs-daterangepicker.js">
+    </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.25/daterangepicker.js">
+    </script>
+    <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.25/daterangepicker.css">
+    <!-- /daterangepicker -->
+
+    <script src="app.js"></script>
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp">
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="home">
+            Bit-Coupon
+        </a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="issue">Coupon</a></li>
+        <li><a ui-sref="settings">Settings</a></li>
+
+
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view></div>
+
+</div>
+<div class="text-center">
+    <p>
+        <a href="#" target="_blank">
+            Project by Ramesh and Prahalad Belavadi
+        </a>
+    </p>
+
+</div>
+</body>
+
+
+</html>

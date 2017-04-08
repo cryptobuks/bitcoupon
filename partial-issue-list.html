@@ -1,0 +1,39 @@
+<div class=" jumbotron">
+    <table st-table="rowCollection" class="table table-striped" >
+
+        <thead>
+    <tr>
+        <th>Profile</th>
+        <th>No of Coupons</th>
+        <th>Message</th>
+        <th>Value</th>
+        <th>QR Code</th>
+        <th>Bitcoin Address</th>
+
+    </tr>
+    </thead>
+    <tr ng-repeat="coupon in coupons">
+
+        <td>
+            {{coupon.issuer}}
+        </td>
+        <td>
+            {{ coupon.numberOfTokens }}
+        </td>
+        <td>
+            {{coupon.message}}
+        </td>
+        <td>
+            {{coupon.value | currency:'&#8377;'}}
+        </td>
+
+        <td>
+            <img ng-src="{{coupon.code}}" alt="">
+        </td>
+        <td>
+            {{coupon.bitcoinAddress}}
+        </td>
+    </tr>
+</div>
+
+</div>
